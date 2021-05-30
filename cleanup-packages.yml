@@ -1,0 +1,63 @@
+---
+- name: Playbook to cleanup-packages
+  hosts: 192.168.0.161
+
+  tasks:
+    - name: Ansible apt purge thunderbird
+      become: yes
+      apt:
+        name: thunderbird
+        purge: true
+        state: absent
+
+    - name: Ansible apt purge light-locker
+      become: yes
+      apt: name=light-locker purge=true state=absent
+
+    - name: Ansible apt purge blueberry
+      become: yes
+      apt: name=blueberry purge=true state=absent
+
+    - name: Ansible apt purge bluetooth
+      become: yes
+      apt: name=bluetooth purge=true state=absent
+
+    - name: Ansible apt purge bluez
+      become: yes
+      apt: name=bluez purge=true state=absent
+
+    - name: Ansible apt purge bluez-tools
+      become: yes
+      apt: name=bluez-tools purge=true state=absent
+
+    - name: Ansible apt purge fonts-noto-cjk
+      become: yes
+      apt: name=fonts-noto-cjk purge=true state=absent
+
+    - name: Ansible apt install firefox
+      become: yes
+      apt: name=firefox state=present
+
+#    - name: Ansible apt install chromium-browser
+#      become: yes
+#      apt: name=chromium-browser state=present
+
+#    - name: Update APT package cache
+#      become: yes
+#      apt: update_cache=yes cache_valid_time=600
+
+#    - name: Upgrade APT to the latest packages
+#      become: yes
+#      apt: upgrade=dist
+#      register: apt_result
+
+    - name: Remove useless packages from the cache
+      become: yes
+      apt:
+        autoclean: yes
+
+    - name: Remove dependencies that are no longer required
+      become: yes
+      apt:
+        autoremove: yes
+

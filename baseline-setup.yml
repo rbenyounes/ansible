@@ -1,0 +1,35 @@
+---
+- name: Playbook to baseline setup
+  hosts: 192.168.0.161
+
+  tasks:
+    - name: lightdm, autologin-user
+      become: yes
+      copy: 
+        dest: /etc/lightdm/lightdm.conf
+        content: |
+          [SeatDefaults]
+          allow-guest=false
+          autologin-guest=false
+          autologin-user=ben
+          autologin-user-timeout=0
+
+#    - name: Install adblock plus addon
+#      firefox_addon:
+#        url: https://addons.mozilla.org/en-US/firefox/addon/adblock-plus
+#        state: present
+
+    - name: Copy /etc/firefox/syspref.js
+      become: yes
+      copy:
+        src: syspref.js
+        dest: /etc/firefox/syspref.js
+
+    - name: Create a login user
+      become: yes
+      user:
+        name: ben
+        state: present
+        system: no             # Defaults to no
+        createhome: yes        # Defaults to yes
+
