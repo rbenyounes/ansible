@@ -38,9 +38,9 @@
       become: yes
       apt: name=firefox state=present
 
-#    - name: Ansible apt install chromium-browser
-#      become: yes
-#      apt: name=chromium-browser state=present
+    - name: Ansible apt install chromium-browser
+      become: yes
+      apt: name=chromium-browser state=present
 
 #    - name: Update APT package cache
 #      become: yes

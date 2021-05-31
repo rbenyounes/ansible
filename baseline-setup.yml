@@ -25,6 +25,15 @@
         src: syspref.js
         dest: /etc/firefox/syspref.js
 
+#    - name: Create /etc/chromium-browser/policies/managed/ directory
+#      file: path=/etc/some_directory state=directory mode=0755
+
+    - name: Copy /etc/chromium/policies/managed/policies.json
+      become: yes
+      copy:
+        src: policies.json
+        dest: /etc/chromium/policies/managed/
+
     - name: Create a login user
       become: yes
       user:

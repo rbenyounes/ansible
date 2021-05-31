@@ -1,0 +1,7 @@
+{
+  "HomepageIsNewTabPage": false,
+  "ShowHomeButton": false,
+  "HomepageLocation": "https://www.chromium.org",
+  "RestoreOnStartup": 4,
+  "RestoreOnStartupURLs": ["https://www.chromium.org"]
+}
