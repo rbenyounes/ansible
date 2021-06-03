@@ -19,6 +19,12 @@
 #        url: https://addons.mozilla.org/en-US/firefox/addon/adblock-plus
 #        state: present
 
+    - name: Copy /etc/systemd/logind.conf
+      become: yes
+      copy:
+        src: logind.conf
+        dest: /etc/systemd/logind.conf
+
     - name: Copy /etc/firefox/syspref.js
       become: yes
       copy:

@@ -22,6 +22,10 @@
       become: yes
       apt: name=bluetooth purge=true state=absent
 
+    - name: Ansible apt purge xfce4-power-manager
+      become: yes
+      apt: name=xfce4-power-manager purge=true state=absent
+
 #    - name: Ansible apt purge libbluetooth3
 #      become: yes
 #      apt: name=libbluetooth3 purge=true state=absent
