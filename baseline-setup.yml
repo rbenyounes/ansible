@@ -1,6 +1,6 @@
 ---
 - name: Playbook to baseline setup
-  hosts: 192.168.0.161
+  hosts: all
 
   tasks:
     - name: lightdm, autologin-user

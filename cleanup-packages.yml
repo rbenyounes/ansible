@@ -1,6 +1,6 @@
 ---
 - name: Playbook to cleanup-packages
-  hosts: 192.168.0.161
+  hosts: all
 
   tasks:
     - name: Ansible apt purge thunderbird
@@ -22,9 +22,25 @@
       become: yes
       apt: name=bluetooth purge=true state=absent
 
+#    - name: Ansible apt purge libbluetooth3
+#      become: yes
+#      apt: name=libbluetooth3 purge=true state=absent
+
+    - name: Ansible apt purge libgnome-bluetooth13
+      become: yes
+      apt: name=libgnome-bluetooth13 purge=true state=absent
+
+    - name: Ansible apt purge bluez-cups
+      become: yes
+      apt: name=bluez-cups purge=true state=absent
+
     - name: Ansible apt purge bluez
       become: yes
       apt: name=bluez purge=true state=absent
+
+    - name: Ansible apt purge bluez-obexd
+      become: yes
+      apt: name=bluez-obexd purge=true state=absent
 
     - name: Ansible apt purge bluez-tools
       become: yes
