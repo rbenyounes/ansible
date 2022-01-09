@@ -1,3 +1,10 @@
+# github
+
+clone the Git repository
+```
+mettre la commande ici
+```
+
 # ansible
 
 git clone https://github.com/rbenyounes/ansible
