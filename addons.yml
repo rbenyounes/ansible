@@ -1,0 +1,10 @@
+---
+- name: Playbook to addons setup
+  hosts: all
+
+  tasks:
+# installing this allow to enforce the suspend-when-lid-or-power-button-is-pushed
+    - name: Ansible apt install nvidia-340
+      become: yes
+      apt: name=nvidia-340 state=present
+
