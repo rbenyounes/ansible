@@ -21,9 +21,10 @@ sudo vim /etc/ansible/hosts
 192.168.0.102 ansible_user=admin
 ```
 
-# ansible
+# ansible-playbook
 
-
+```
 ansible-playbook cleanup-packages.yml --ask-become-pass
 
 ansible-playbook baseline-setup.yml --ask-become-pass
+```
