@@ -28,10 +28,26 @@ sudo vim /etc/ansible/hosts
 192.168.0.102 ansible_user=admin
 ```
 
-# run ansible-playbook
+# run ansible-playbook cleanup
 
 ```
 ansible-playbook cleanup-packages.yml --ask-become-pass
+```
 
+# run ansible-playbook baseline
+
+```
 ansible-playbook baseline-setup.yml --ask-become-pass
 ```
+In summary:
+- autologin user ben /etc/lightdm/lightdm.conf
+- copy /etc/systemd/logind.conf
+- copy /etc/firefox/syspref.js
+- copy /etc/chromium/policies/managed/policies.json
+- create user ben
+
+
+
+
+
+

@@ -25,11 +25,11 @@
         src: logind.conf
         dest: /etc/systemd/logind.conf
 
-    - name: Copy /etc/firefox/syspref.js
-      become: yes
-      copy:
-        src: syspref.js
-        dest: /etc/firefox/syspref.js
+#    - name: Copy /etc/firefox/syspref.js
+#      become: yes
+#      copy:
+#        src: syspref.js
+#        dest: /etc/firefox/syspref.js
 
 #    - name: Create /etc/chromium-browser/policies/managed/ directory
 #      file: path=/etc/some_directory state=directory mode=0755
@@ -47,4 +47,6 @@
         state: present
         system: no             # Defaults to no
         createhome: yes        # Defaults to yes
+
+
 

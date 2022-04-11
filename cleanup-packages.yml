@@ -3,26 +3,23 @@
   hosts: all
 
   tasks:
-    - name: Ansible apt purge thunderbird
+    - name: thunderbird
       become: yes
-      apt:
-        name: thunderbird
-        purge: true
-        state: absent
+      apt: name: thunderbird purge: true state: absent
 
-    - name: Ansible apt purge light-locker
+    - name: light-locker
       become: yes
       apt: name=light-locker purge=true state=absent
 
-    - name: Ansible apt purge blueberry
+    - name: blueberry
       become: yes
       apt: name=blueberry purge=true state=absent
 
-    - name: Ansible apt purge bluetooth
+    - name: bluetooth
       become: yes
       apt: name=bluetooth purge=true state=absent
 
-    - name: Ansible apt purge xfce4-power-manager
+    - name: xfce4-power-manager
       become: yes
       apt: name=xfce4-power-manager purge=true state=absent
 
@@ -58,13 +55,26 @@
       become: yes
       apt: name=fonts-noto-cjk purge=true state=absent
 
-    - name: Ansible apt install firefox
+    - name: firefox
       become: yes
-      apt: name=firefox state=present
+      apt: name=firefox purge=true state=absent
 
-    - name: Ansible apt install chromium-browser
+    - name: evolution-data-server-common
+      become: yes
+      apt: name=evolution-data-server-common purge=true state=absent
+
+    - name: chromium-browser
       become: yes
       apt: name=chromium-browser state=present
+
+    # installing nvidia-340 allow to enforce the suspend-when-lid-or-power-button-is-pushed
+    - name: Ansible apt install nvidia-340
+      become: yes
+      apt: name=nvidia-340 state=present
+
+    - name: Ansible apt install oneko
+      become: yes
+      apt: name=oneko state=present
 
 #    - name: Update APT package cache
 #      become: yes
@@ -84,4 +94,5 @@
       become: yes
       apt:
         autoremove: yes
+
 
