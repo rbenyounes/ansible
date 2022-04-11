@@ -1,6 +1,13 @@
-# github
+# setup git
 
-clone the Git repository
+```
+sudo apt install git
+git config --global user.email "youremail@gmail.com"
+git config --global user.name "yourname"
+```
+
+# clone github repository and push a change
+
 ```
 git clone https://github.com/rbenyounes/ansible
 git remote set-url origin git@github.com:rbenyounes/ansible.git
@@ -9,7 +16,7 @@ git commit -m "comment"
 git push
 ```
 
-# ansible target machines
+# configure ansible target machines
 
 Make sure the hosts was added to `/etc/ansible/hosts`
 ```
@@ -21,7 +28,7 @@ sudo vim /etc/ansible/hosts
 192.168.0.102 ansible_user=admin
 ```
 
-# ansible-playbook
+# run ansible-playbook
 
 ```
 ansible-playbook cleanup-packages.yml --ask-become-pass
