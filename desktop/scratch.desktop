@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Scratch
+Comment=
+Exec=chromium --incognito https://scratch.mit.edu/
+Icon=/var/opt/icons/scratch.png
+Path=
+Terminal=false
+StartupNotify=false

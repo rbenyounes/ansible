@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Google
+Comment=
+Exec=chromium --incognito --kiosk https://www.google.com
+Icon=/var/opt/icons/google.png
+Path=
+Terminal=false
+StartupNotify=false

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Classroom
+Comment=
+Exec=chromium --incognito --start-fullscreen https://classroom.google.com/u
+Icon=/var/opt/icons/classroom.png
+Path=
+Terminal=false
+StartupNotify=false

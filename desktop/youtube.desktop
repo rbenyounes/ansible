@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Youtube
+Comment=
+Exec=chromium --incognito --kiosk --app=https://www.youtube.com
+Icon=/var/opt/icons/youtube.png
+Path=
+Terminal=false
+StartupNotify=false

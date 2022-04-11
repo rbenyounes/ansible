@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Bankaroo
+Comment=
+Exec=chromium --start-fullscreen https://app.bankaroo.com/
+Icon=/var/opt/icons/bankaroo.png
+Path=
+Terminal=false
+StartupNotify=false
